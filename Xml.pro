@@ -20,4 +20,4 @@ SOURCES += main.cpp \
 HEADERS += \
     all.h \
     parser.h
-LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui
+LIBS += -lopencv_core -lopencv_imgproc -lopencv_highgui -lgdal

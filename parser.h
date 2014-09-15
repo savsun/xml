@@ -5,17 +5,19 @@
 class Parser: public QXmlDefaultHandler
 {
 public:
-    Parser(int countFrame);
+    Parser();
+    vector<QMap<string,double> > frames;
 private:
     QString strText;
-    int k=1;
-    int _countFrame;
+    QMap<string,double> frame;
+
+    double *xy=new double[2];
 
 public:
-    bool startElement(const QString &, const QString &,const QString& teg, const QXmlAttributes& attrs);
     bool characters(const QString& _strText);
     bool endElement (const QString&, const QString&, const QString& str);
     bool fatalError (const QXmlParseException &exception);
+    double* transform(double y, double x);
 };
 
 #endif // PARSER_H

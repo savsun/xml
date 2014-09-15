@@ -6,6 +6,7 @@
 #include <opencv2/opencv.hpp>
 #include <QXmlDefaultHandler>
 #include <QTest>
+#include <ogr_spatialref.h>
 
 using namespace std;
 using namespace cv;
